@@ -33,6 +33,7 @@ describe("LinkedList", function() {
   
   it("Добавляет элемент в голову списка", function() {
     var list1 = new LinkedList([1, 2, 3]);
-    assert.deepEqual(list1.prepend(0).value, 0);
+    var list2 = list1.prepend(0);
+    assert.deepEqual(list2.value, 0);
   })
 }); 
