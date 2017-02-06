@@ -11,7 +11,9 @@ describe("LinkedList", function() {
         }
       }
     };
-    assert.deepEqual(list1, list2);
+    assert.deepEqual(list1.value, list2.value);
+    assert.deepEqual(list1.rest.value, list2.rest.value);
+    assert.deepEqual(list1.rest.rest.value, list2.rest.rest.value);
   });
   
   it("Возвращает голову списка", function() {
