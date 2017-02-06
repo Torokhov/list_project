@@ -1,4 +1,10 @@
 function LinkedList(arr) {
+  this.prepend = function(a) {
+    var newList = new LinkedList([a]);
+    newList.rest = this;
+    return newList;
+  }
+  
   this.getHead = function() {
     this.rest = null;
     return this;
