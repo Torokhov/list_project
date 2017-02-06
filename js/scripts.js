@@ -4,6 +4,12 @@ function LinkedList(arr) {
     return this;
   }
   
+  this.getRest = function() {
+    var rest = this.rest;
+    this.rest = null;
+    return rest;
+  }
+  
   if (arr.length === 1) {
     this.value = arr.shift();
     this.rest = null;
