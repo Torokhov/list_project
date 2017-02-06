@@ -13,4 +13,9 @@ describe("LinkedList", function() {
     };
     assert.deepEqual(list1, list2);
   });
+  
+  it("Возвращает голову списка", function() {
+    var list1 = new LinkedList([1, 2, 3]);
+    assert.equal(list1.getHead().value, 1);
+  });
 }); 
