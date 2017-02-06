@@ -30,4 +30,9 @@ describe("LinkedList", function() {
     var list1 = new LinkedList([1, 2, 3]);
     assert.deepEqual(list1.toArray(), [1, 2, 3]);
   });
+  
+  it("Добавляет элемент в голову списка", function() {
+    var list1 = new LinkedList([1, 2, 3]);
+    assert.deepEqual(list1.prepend(0).value, 0);
+  })
 }); 
