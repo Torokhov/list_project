@@ -10,6 +10,22 @@ function LinkedList(arr) {
     return rest;
   }
   
+  this.toArray = function() {
+    function iter(list, arr) {
+      if (!list.rest) {
+        arr.push(list.value);
+        return arr;
+      }
+      
+      arr.push(list.value);
+      list = list.getRest();
+      
+      return iter(list, arr);
+    }
+    
+    return iter(this, []);
+  }
+  
   if (arr.length === 1) {
     this.value = arr.shift();
     this.rest = null;
