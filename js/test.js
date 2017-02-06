@@ -25,4 +25,9 @@ describe("LinkedList", function() {
     var list1 = new LinkedList([1, 2, 3]);
     assert.equal(list1.getRest().value, 2);
   });
+  
+  it("Возвращает массив из списка", function() {
+    var list1 = new LinkedList([1, 2, 3]);
+    assert.deepEqual(list1.toArray(), [1, 2, 3]);
+  });
 }); 
