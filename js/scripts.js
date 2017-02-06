@@ -16,6 +16,29 @@ function LinkedList(arr) {
     return rest;
   }
   
+  this.getElem = function(n) {
+    if (n < 0) {
+      return undefined;
+    }
+    
+    function iter(i, list) {
+      if (!list.rest) {
+        return undefined;
+      }
+      
+      if (i === n) {
+        return list.value;
+      }
+      
+      list = list.getRest();
+      i++;
+      
+      return iter(i, list);
+    }
+    
+    return iter(0, this);
+  }
+  
   this.toArray = function() {
     function iter(list, arr) {
       if (!list.rest) {
