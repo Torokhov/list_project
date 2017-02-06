@@ -34,6 +34,13 @@ describe("LinkedList", function() {
   it("Добавляет элемент в голову списка", function() {
     var list1 = new LinkedList([1, 2, 3]);
     var list2 = list1.prepend(0);
-    assert.deepEqual(list2.value, 0);
+    assert.equal(list2.value, 0);
   })
+  
+  it("Поиск элемента по порядковому номеру", function() {
+    var list1 = new LinkedList([1, 2, 3]);
+    assert.equal(list1.getElem(1), 2);
+    assert.equal(list1.getElem(-1), undefined);
+    assert.equal(list1.getElem(4), undefined);
+  });
 }); 
