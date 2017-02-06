@@ -20,4 +20,9 @@ describe("LinkedList", function() {
     var list1 = new LinkedList([1, 2, 3]);
     assert.equal(list1.getHead().value, 1);
   });
+  
+  it("Возвращает хвост списка", function() {
+    var list1 = new LinkedList([1, 2, 3]);
+    assert.equal(list1.getRest().value, 2);
+  });
 }); 
